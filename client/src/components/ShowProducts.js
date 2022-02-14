@@ -1,6 +1,7 @@
 import React,{useState, useEffect} from 'react';
 import axios from 'axios';
-import { Card, Button, } from 'react-bootstrap'
+import { Card,  } from 'react-bootstrap';
+import {Link} from 'react-router-dom';
 
 function ShowProducts(props) {
 
@@ -26,7 +27,7 @@ function ShowProducts(props) {
            <Card.Text>{product.price}</Card.Text>
            <Card.Text>{product.description}</Card.Text>
            <Card.Text>{product.category}</Card.Text>
-           <Button variant="primary">Details</Button>
+           <Link className="btn btn-primary" to={`/${product.id}/`}>Detail</Link>
          </Card.Body>
        </Card>
            ))}
